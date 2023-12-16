@@ -9,6 +9,11 @@ import java.util.Optional;
 
 public class MemberService {
     private MemberRepository memberRepository = new MemoryMemberRepository();
+
+    // dependency injection
+    public MemberService(MemberRepository memberRepository){
+        this.memberRepository = memberRepository;
+    }
     public Long join(Member member){
         validateDuplicateMember(member);
         memberRepository.save(member);
