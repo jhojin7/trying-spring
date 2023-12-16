@@ -1,5 +1,6 @@
-#! /bin/sh
+#!/bin/sh
 
-echo $(pwd)
-./gradlew build
-java -jar build/libs/*-SNAPSHOT.jar | lolcat
+pwd | lolcat
+wd=`pwd`
+$wd/gradlew build
+java -jar $wd/build/libs/*-SNAPSHOT.jar | lolcat
