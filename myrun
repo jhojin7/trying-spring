@@ -3,4 +3,5 @@
 pwd | lolcat
 wd=`pwd`
 $wd/gradlew build
+$wd/gradlew test
 java -jar $wd/build/libs/*-SNAPSHOT.jar | lolcat

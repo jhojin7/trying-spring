@@ -12,15 +12,15 @@ import org.junit.jupiter.api.Test;
 
 class MemberServiceTest {
     MemberService memberService;
-    MemoryMemberRepository memoryMemberRepository;
+    MemoryMemberRepository memberRepository;
     @BeforeEach
     void beforeEach(){
-        memoryMemberRepository = new MemoryMemberRepository();
-        memberService = new MemberService(memoryMemberRepository);
+        memberRepository = new MemoryMemberRepository();
+        memberService = new MemberService(memberRepository);
     }
     @AfterEach
     void afterEach(){
-        memoryMemberRepository.clearStore();
+        memberRepository.clearStore();
     }
 
     @Test
