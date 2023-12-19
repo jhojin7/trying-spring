@@ -14,7 +14,7 @@ import java.util.List;
 public class MemberController {
     private final MemberService memberService;
 
-    @Autowired
+    //@Autowired
     public MemberController(MemberService memberService){
         // Dependency Injection!!
         // Consider defining a bean of type 'hello.hellospring.service.MemberService' in your configuration.
@@ -31,7 +31,7 @@ public class MemberController {
         Member member = new Member();
         member.setName(form.getName());
         memberService.join(member);
-        return "redirect:/";
+        return "redirect:/members";
     }
 
     @GetMapping("/members")
